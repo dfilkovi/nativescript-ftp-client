@@ -10,8 +10,6 @@ Android - based on http://www.sauronsoftware.it/projects/ftp4j/api/index.html
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
-
 ```javascript
 tns plugin add nativescript-ftp-client
 ```

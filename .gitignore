@@ -25,3 +25,6 @@ demo/report/report.html
 demo/report/stats.json
 !demo-vue/app/app.js
 src/node_modules/
+/publish/package-lock.json
+/demo/package-lock.json
+/src/platforms/android/nativescript_ftp_client.aar
