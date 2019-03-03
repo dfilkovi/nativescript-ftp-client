@@ -1,3 +1,7 @@
+import "globals";
+
+declare var global: any
+
 export class FtpClient {
 
     private worker: Worker;
@@ -26,7 +30,16 @@ export class FtpClient {
         {
             try
             {
-                me.worker = new Worker('./ftp-worker-android.js');
+                me.worker;
+                if(global.TNS_WEBPACK)
+                {
+                    const FtpWorker = require("nativescript-worker-loader!./ftp-worker-android.js");
+                    me.worker = new FtpWorker();
+                } 
+                else 
+                {
+                    me.worker = new Worker('./ftp-worker-android.js');
+                }
 
                 me.worker.onmessage = function(msg)
                 {

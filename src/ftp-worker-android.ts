@@ -41,7 +41,6 @@ export class FtpWorker
     connect(data: any): any
     {
         var me = this;
-        console.log('connect: '+data.url)
         if(data.port != undefined) return me.client.connect(data.url, data.port);
         else return me.client.connect(data.url);
     }
@@ -74,7 +73,6 @@ export class FtpWorker
     {
         var me = this;
         var files = me.client.list();
-        console.log(files);
         var fin = [];
         for(var file of files)
         {

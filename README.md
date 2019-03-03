@@ -28,7 +28,7 @@ Describe any usage specifics for your plugin. Give examples for Android, iOS, An
     //all methods are promises so use await or then
     await client.connect('server.com');
 
-    //or if you have a different port than 21
+    //or if you have a different port than 21 (port must be an int)
     //await client.connect('server.com', 25);
 
     await client.login('username', 'password');
